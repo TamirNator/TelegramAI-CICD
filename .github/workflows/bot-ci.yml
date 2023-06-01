@@ -75,6 +75,7 @@ jobs:
 
   update-version:
     needs: [build-docker]
+    if: contains(fromJSON('["main", "dev"]'), github.ref_name)
     runs-on: ['self-hosted', 'Linux' , 'X64']
     steps:
 
