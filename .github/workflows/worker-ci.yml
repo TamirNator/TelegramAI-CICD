@@ -16,6 +16,9 @@ on:
           - ' '
           - eu-west-1
           - us-east-1
+      playbook:
+        description: 'playbook to run'
+        type: string
 
 concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}
